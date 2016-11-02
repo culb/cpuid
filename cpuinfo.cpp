@@ -86,7 +86,7 @@ cpu::supported(void)
 		"push %%ecx;"
 		"pushfl;"
 		"pop %%eax;"
-		"mov %%ecx, %%eax;"
+		"mov %%eax, %%ecx;"
 		"xor $0x200000, %%eax;"
 		"push %%eax;"
 		"popfl;"
