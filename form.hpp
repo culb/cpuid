@@ -15,7 +15,7 @@
 #include <string>
 #include <cctype> /* isspace */
 #include <sstream> /* stringstream */
-#include <stdint.h>
+#include <cstdint>
 
 
 

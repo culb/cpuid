@@ -11,7 +11,7 @@
 #define __CPUINFO__
 
 #include <string>
-#include <stdint.h>
+#include <cstdint>
 
 
 
