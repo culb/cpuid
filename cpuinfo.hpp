@@ -14,22 +14,20 @@
 #include <cstdint>
 
 
-
-
 namespace cpu
 {
-	void cpuid(uint32_t op, uint32_t& eax, uint32_t& ebx, uint32_t& ecx, uint32_t& edx);
+    void cpuid(uint32_t op, uint32_t& eax, uint32_t& ebx, uint32_t& ecx, uint32_t& edx);
 
-	bool bits(void);
-	bool supported(void);
+    bool bits(void);
+    bool supported(void);
 
-	uint32_t maxcalls(void);
-	uint32_t family(void);
-	uint32_t model(void);
-	uint32_t stepping(void);
+    uint32_t maxcalls(void);
+    uint32_t family(void);
+    uint32_t model(void);
+    uint32_t stepping(void);
 
-	std::string vendor(void);
-	std::string brand(void);
+    std::string vendor(void);
+    std::string brand(void);
 
 namespace features
 {
@@ -42,71 +40,71 @@ namespace features
 /* Flags for features */
 namespace flags
 {
-	enum ecx
-	{
-		SSE3        = 0x00000001,
-		PCLMULQDQ   = 0x00000002,
-		DTES64      = 0x00000004,
-		MONITOR     = 0x00000008,
-		DSCPL       = 0x00000010,
-		VMX         = 0x00000020,
-		SMX         = 0x00000040,
-		EIST        = 0x00000080,
-		TM2         = 0x00000100,
-		SSSE3       = 0x00000200,
-		CNXTID      = 0x00000400,
-		FMA         = 0x00001000,
-		CMPXCHG16B  = 0x00002000,
-		xTPR        = 0x00004000,
-		PDCM        = 0x00008000,
-		PCID        = 0x00020000,
-		DCA         = 0x00040000,
-		SSE41       = 0x00080000,
-		SSE42       = 0x00100000,
-		x2APIC      = 0x00200000,
-		MOVBE       = 0x00400000,
-		POPCNT      = 0x00800000,
-		TSCDEADLINE = 0x01000000,
-		AESNI       = 0x02000000,
-		XSAVE       = 0x04000000,
-		OSXSAVE     = 0x08000000,
-		AVX         = 0x10000000,
-		RDRND       = 0x40000000
-	};
+    enum ecx
+    {
+        SSE3        = 0x00000001,
+        PCLMULQDQ   = 0x00000002,
+        DTES64      = 0x00000004,
+        MONITOR     = 0x00000008,
+        DSCPL       = 0x00000010,
+        VMX         = 0x00000020,
+        SMX         = 0x00000040,
+        EIST        = 0x00000080,
+        TM2         = 0x00000100,
+        SSSE3       = 0x00000200,
+        CNXTID      = 0x00000400,
+        FMA         = 0x00001000,
+        CMPXCHG16B  = 0x00002000,
+        xTPR        = 0x00004000,
+        PDCM        = 0x00008000,
+        PCID        = 0x00020000,
+        DCA         = 0x00040000,
+        SSE41       = 0x00080000,
+        SSE42       = 0x00100000,
+        x2APIC      = 0x00200000,
+        MOVBE       = 0x00400000,
+        POPCNT      = 0x00800000,
+        TSCDEADLINE = 0x01000000,
+        AESNI       = 0x02000000,
+        XSAVE       = 0x04000000,
+        OSXSAVE     = 0x08000000,
+        AVX         = 0x10000000,
+        RDRND       = 0x40000000
+    };
 
-	enum edx
-	{
-		FPU    = 0x00000001,
-		VME    = 0x00000002,
-		DE     = 0x00000004,
-		PSE    = 0x00000008,
-		TSC    = 0x00000010,
-		MSR    = 0x00000020,
-		PAE    = 0x00000040,
-		MCE    = 0x00000080,
-		CX8    = 0x00000100,
-		APIC   = 0x00000200,
-		SEP    = 0x00000800,
-		MTRR   = 0x00001000,
-		PGE    = 0x00002000,
-		MCA    = 0x00004000,
-		CMOV   = 0x00008000,
-		PAT    = 0x00010000,
-		PSE36  = 0x00020000,
-		PSN    = 0x00040000,
-		CLFSH  = 0x00080000,
-		DS     = 0x00200000,
-		ACPI   = 0x00400000,
-		MMX    = 0x00800000,
-		FXSR   = 0x01000000,
-		FXSAVE = 0x01000000,
-		SSE    = 0x02000000,
-		SSE2   = 0x04000000,
-		SS     = 0x08000000,
-		HTT    = 0x10000000,
-		TM     = 0x20000000,
-		PBE    = 0x80000000
-	};
+    enum edx
+    {
+        FPU    = 0x00000001,
+        VME    = 0x00000002,
+        DE     = 0x00000004,
+        PSE    = 0x00000008,
+        TSC    = 0x00000010,
+        MSR    = 0x00000020,
+        PAE    = 0x00000040,
+        MCE    = 0x00000080,
+        CX8    = 0x00000100,
+        APIC   = 0x00000200,
+        SEP    = 0x00000800,
+        MTRR   = 0x00001000,
+        PGE    = 0x00002000,
+        MCA    = 0x00004000,
+        CMOV   = 0x00008000,
+        PAT    = 0x00010000,
+        PSE36  = 0x00020000,
+        PSN    = 0x00040000,
+        CLFSH  = 0x00080000,
+        DS     = 0x00200000,
+        ACPI   = 0x00400000,
+        MMX    = 0x00800000,
+        FXSR   = 0x01000000,
+        FXSAVE = 0x01000000,
+        SSE    = 0x02000000,
+        SSE2   = 0x04000000,
+        SS     = 0x08000000,
+        HTT    = 0x10000000,
+        TM     = 0x20000000,
+        PBE    = 0x80000000
+    };
 }
 
 

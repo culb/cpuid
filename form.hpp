@@ -19,14 +19,13 @@
 
 
 
-
 /* Push the values in a register to a string */
 static
 void
 reg_to_string(uint32_t reg, std::stringstream & str)
 {
-	for(int32_t i = 0; i <= 3; i++)
-		str << ((char*)&reg)[i];
+    for(int32_t i = 0; i <= 3; i++)
+        str << ((char*)&reg)[i];
 }
 
 
@@ -35,10 +34,10 @@ static
 std::string
 whitespace_reduce(std::string str)
 {
-	uint32_t index;
-	while ((index = str.find("  ")) != std::string::npos)
-		str.erase(index, 1);
-	return str;
+    uint32_t index;
+    while ((index = str.find("  ")) != std::string::npos)
+        str.erase(index, 1);
+    return str;
 }
 
 
@@ -47,9 +46,9 @@ static
 std::string
 trim_l(std::string str)
 {
-	while (std::isspace(*str.begin()))
-		str.erase(str.begin());
-	return str;
+    while (std::isspace(*str.begin()))
+        str.erase(str.begin());
+    return str;
 }
 
 #endif /* __FORM__ */
